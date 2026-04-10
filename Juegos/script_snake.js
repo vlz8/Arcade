@@ -88,13 +88,6 @@ class SnakeGame {
 
     moveSnake() {
         const head = { x: this.snake[0].x + this.dx, y: this.snake[0].y + this.dy };
-
-        // Wrap around screen (optional - comment out for classic snake that dies on wall)
-        /* if (head.x < 0) head.x = this.tileCount - 1;
-        if (head.x >= this.tileCount) head.x = 0;
-        if (head.y < 0) head.y = this.tileCount - 1;
-        if (head.y >= this.tileCount) head.y = 0; */
-
         this.snake.unshift(head);
 
         // Check if ate food
@@ -192,7 +185,7 @@ class SnakeGame {
     }
 
     goHome() {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     }
 
     loadHighScore() {
