@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="style_connect4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Connect Four</h1>
+        <div class="game-info">
+            <div>Turn: <span id="turn-label">Red</span></div>
+        </div>
+        <div class="drop-row" id="drop-row" aria-label="Choose column"></div>
+        <div class="board-wrap">
+            <div class="board" id="board"></div>
+        </div>
+        <div class="game-status" id="game-status">Red goes first — click a column arrow</div>
+        <div class="controls">
+            <button type="button" id="reset-btn">New game</button>
+            <button type="button" id="home-btn">Home</button>
+        </div>
+    </div>
+    <script src="script_connect4.js"></script>
+</body>
+</html>
