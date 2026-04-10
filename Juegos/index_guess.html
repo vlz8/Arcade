@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style_guess.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number</h1>
+        <p class="hint">I’m thinking of a number from <strong>1</strong> to <strong>100</strong>.</p>
+        <div class="game-info">
+            <div>Attempts: <span id="attempts">0</span></div>
+            <div>Best (fewest): <span id="best">—</span></div>
+        </div>
+        <div class="input-row">
+            <input type="number" id="guess-input" min="1" max="100" placeholder="1–100" aria-label="Your guess">
+            <button type="button" id="guess-btn">Guess</button>
+        </div>
+        <div class="game-status" id="game-status">Type a number and press Guess</div>
+        <div class="history" id="history"></div>
+        <div class="controls">
+            <button type="button" id="reset-btn">New number</button>
+            <button type="button" id="home-btn">Home</button>
+        </div>
+    </div>
+    <script src="script_guess.js"></script>
+</body>
+</html>
