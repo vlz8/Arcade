@@ -112,7 +112,7 @@
 
     document.getElementById('reset-btn').addEventListener('click', reset);
     document.getElementById('home-btn').addEventListener('click', () => {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     });
     startBtn.addEventListener('click', start);
 
