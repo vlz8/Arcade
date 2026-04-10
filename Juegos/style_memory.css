@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: #fff;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    max-width: 666px;
+    width: 100%;
+}
+
+h1 {
+    color: #feca57;
+    margin-bottom: 16px;
+    font-size: 2.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 18px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.game-info span {
+    color: #feca57;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0 auto 18px;
+    max-width: 360px;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+    border-radius: 11px;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    background: linear-gradient(145deg, #2d1f4e, #1a1030);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+}
+
+.memory-card:hover:not(.matched) {
+    transform: scale(1.03);
+    box-shadow: 0 6px 25px rgba(254, 202, 87, 0.25);
+}
+
+.memory-card .back {
+    font-size: 1.8rem;
+    opacity: 0.9;
+}
+
+.memory-card .front {
+    display: none;
+}
+
+.memory-card.flipped .back,
+.memory-card.matched .back {
+    display: none;
+}
+
+.memory-card.flipped .front,
+.memory-card.matched .front {
+    display: flex;
+}
+
+.memory-card.matched {
+    border-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.25);
+    cursor: default;
+    transform: none;
+}
+
+.game-status {
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-bottom: 16px;
+    min-height: 28px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+#reset-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+#home-btn {
+    background: #95a5a6;
+    color: white;
+}
